@@ -9,10 +9,10 @@ public class I18NConfig {
 
 	@Bean
 	public ReloadableResourceBundleMessageSource messageSource() {
-		ReloadableResourceBundleMessageSource rbms=new ReloadableResourceBundleMessageSource();
+		ReloadableResourceBundleMessageSource rbms = new ReloadableResourceBundleMessageSource();
 		rbms.setBasename("classpath:i18n/messages");
-		
-		//Checks for new message every 30 minutes
+
+		// Checks for new message every 30 minutes
 		rbms.setCacheSeconds(1800);
 		return rbms;
 	}
